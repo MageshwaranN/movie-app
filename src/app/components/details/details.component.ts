@@ -13,7 +13,7 @@ import { DetailsResponse } from '../../interfaces';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
 
-  result;
+  result: DetailsResponse;
   routeParamsSubscription: Subscription;
 
   constructor(private searchService: SearchApiService, private route: ActivatedRoute, private router: Router) { }
