@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchComponent, PageNotFoundComponent } from './components';
+import { SearchComponent, PageNotFoundComponent, DetailsComponent } from './components';
 
 const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent
+  },
+  {
+    path: 'details/:id',
+    component: DetailsComponent
   },
   { path: '',
     redirectTo: '/search',

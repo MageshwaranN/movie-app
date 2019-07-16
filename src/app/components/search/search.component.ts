@@ -7,7 +7,7 @@ import {
 } from 'rxjs/operators';
 
 import { SearchApiService } from '../../services';
-import { SearchResponse } from '../../interfaces/search-response';
+import { SearchResponse } from '../../interfaces';
 
 @Component({
   selector: 'movie-search',
@@ -27,12 +27,10 @@ export class SearchComponent implements OnInit {
       switchMap((query) => this.searchService.search(query))
     )
     .subscribe((result: SearchResponse) => {
-      console.log(result);
-      if (result.Response === 'True') {
+      if (result.Response !== 'True') {
         return;
       } else {
         this.results = result.Search;
-        console.log(this.results);
       }
     });
   }

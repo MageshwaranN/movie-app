@@ -20,4 +20,14 @@ export class SearchApiService {
 
     return this.http.get(this.baseUrl, { params });
   }
+
+  details(id: string) {
+
+    let params = new HttpParams();
+
+    params = params.append('i', id);
+    params = params.append('apiKey', this.apiKey);
+
+    return this.http.get(this.baseUrl, { params });
+  }
 }

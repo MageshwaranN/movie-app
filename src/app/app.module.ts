@@ -6,13 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent, PageNotFoundComponent } from './components';
+import { SearchComponent, PageNotFoundComponent, DetailsComponent } from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
